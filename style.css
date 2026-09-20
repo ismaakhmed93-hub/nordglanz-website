@@ -1,0 +1,948 @@
+/* =========================================
+   NORDGLANZ
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Manrope", Arial, sans-serif;
+    color: #142724;
+    background: #ffffff;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    min-height: 88px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    box-shadow: 0 3px 20px rgba(0,0,0,0.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #087f6b;
+    color: white;
+    border-radius: 12px;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.logo strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.logo small {
+    display: block;
+    margin-top: 2px;
+    color: #586c68;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.navigation a {
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.navigation a:hover {
+    color: #087f6b;
+}
+
+.header-button {
+    padding: 13px 21px;
+    background: #087f6b;
+    color: white;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.header-button:hover {
+    background: #066c5b;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 760px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(7, 28, 26, 0.94) 0%,
+            rgba(7, 28, 26, 0.80) 43%,
+            rgba(7, 28, 26, 0.18) 100%
+        ),
+        url("./reinigung-mann.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 790px;
+    color: white;
+}
+
+.hero-badge {
+    display: inline-block;
+    margin-bottom: 27px;
+    padding: 9px 15px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 50px;
+    background: rgba(255,255,255,0.1);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    margin-bottom: 25px;
+    font-size: clamp(50px, 6vw, 80px);
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -2.5px;
+}
+
+.hero h1 span {
+    color: #78e4cb;
+}
+
+.hero-text {
+    max-width: 660px;
+    color: rgba(255,255,255,0.92);
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 15px 25px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 800;
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-primary {
+    margin-top: 34px;
+    background: #10a68b;
+    color: white;
+}
+
+.button-primary:hover {
+    background: #0b8d76;
+}
+
+.hero-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 38px;
+    color: rgba(255,255,255,0.92);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.hero-benefits div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-benefits strong {
+    color: #78e4cb;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   TRUST
+========================================= */
+
+.trust {
+    padding: 36px 8%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #f3f8f7;
+    border-bottom: 1px solid #dde9e6;
+}
+
+.trust div {
+    padding: 4px 28px;
+    border-right: 1px solid #d7e4e1;
+}
+
+.trust div:first-child {
+    padding-left: 0;
+}
+
+.trust div:last-child {
+    border-right: 0;
+}
+
+.trust strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.trust span {
+    display: block;
+    margin-top: 4px;
+    color: #536864;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   ALLGEMEINE SEKTIONEN
+========================================= */
+
+.section {
+    padding: 105px 8%;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin-bottom: 50px;
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 13px;
+    color: #087f6b;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.section-heading h2,
+.about-content h2,
+.contact-info h2 {
+    margin-bottom: 20px;
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.16;
+    letter-spacing: -1.5px;
+}
+
+.section-heading p,
+.about-content > p,
+.contact-info > p {
+    color: #4e625e;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   LEISTUNGEN
+========================================= */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+}
+
+.service-card {
+    overflow: hidden;
+    background: #f7faf9;
+    border: 1px solid #dfeae7;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(15,55,49,0.12);
+}
+
+.service-image {
+    height: 275px;
+    background-size: cover;
+    background-position: center;
+}
+
+.service-image.office {
+    background-image:
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85");
+}
+
+.service-image.windows {
+    background-image:
+        url("https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=85");
+}
+
+.service-image.stairs {
+    background-image:
+        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85");
+}
+
+.service-image.deep-clean {
+    background-image:
+        url("https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=1200&q=85");
+}
+
+.service-content {
+    padding: 32px;
+}
+
+.service-number {
+    color: #087f6b;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.service-content h3 {
+    margin: 6px 0 12px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.service-content p {
+    color: #50645f;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+
+/* =========================================
+   ÜBER UNS
+========================================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+    background: #f3f8f7;
+}
+
+.about-image {
+    min-height: 610px;
+    position: relative;
+    border-radius: 20px;
+
+    background-image:
+        linear-gradient(
+            0deg,
+            rgba(5,35,31,0.25),
+            rgba(5,35,31,0.02)
+        ),
+        url("./reinigung-mann.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 25px 60px rgba(20,55,50,0.14);
+}
+
+.experience-box {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    padding: 27px;
+    background: rgba(8,38,34,0.92);
+    color: white;
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+}
+
+.experience-box strong {
+    display: block;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.experience-box span {
+    display: block;
+    margin-top: 3px;
+    color: rgba(255,255,255,0.82);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.check-list {
+    margin-top: 35px;
+}
+
+.check-list > div {
+    display: flex;
+    gap: 17px;
+    margin-bottom: 26px;
+}
+
+.check-list > div > span {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dcefe9;
+    color: #087f6b;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.check-list p {
+    color: #50645f;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+.check-list strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #142724;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   KONTAKT
+========================================= */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 85px;
+    align-items: start;
+}
+
+.contact-info > p {
+    margin-bottom: 38px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin: 25px 0;
+}
+
+.contact-item > span {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: #e4f2ee;
+    color: #087f6b;
+    border-radius: 11px;
+    font-size: 18px;
+}
+
+.contact-item small {
+    display: block;
+    color: #61736f;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.contact-item strong {
+    display: block;
+    margin-top: 2px;
+    color: #142724;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   FORMULAR
+========================================= */
+
+.form-container {
+    padding: 48px;
+    background: #f5f8f7;
+    border: 1px solid #dce8e5;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(17,54,48,0.07);
+}
+
+.form-container h3 {
+    color: #142724;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.form-intro {
+    margin: 9px 0 32px;
+    color: #536762;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 21px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #253936;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 16px;
+    background: white;
+    color: #142724;
+    border: 1px solid #cbd9d5;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.form-group input,
+.form-group select {
+    min-height: 52px;
+}
+
+.form-group textarea {
+    min-height: 145px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #82918e;
+    opacity: 1;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #087f6b;
+    box-shadow: 0 0 0 3px rgba(8,127,107,0.11);
+}
+
+.privacy-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin: 4px 0 25px;
+    color: #536762;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.privacy-check input {
+    width: 17px;
+    height: 17px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.submit-button {
+    width: 100%;
+    min-height: 56px;
+    background: #087f6b;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.submit-button:hover {
+    background: #066b5a;
+}
+
+.submit-button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+    transform: none;
+}
+
+
+/* =========================================
+   ERFOLG / FEHLER
+========================================= */
+
+.form-message {
+    display: none;
+}
+
+.form-message.success,
+.form-message.error {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    animation: messageAppear 0.35s ease;
+}
+
+.form-message.success {
+    background: #e2f6ed;
+    border: 1px solid #9ed8c4;
+    color: #075c47;
+}
+
+.form-message.error {
+    background: #fff0f0;
+    border: 1px solid #efb5b5;
+    color: #9b2929;
+}
+
+.message-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.success .message-icon {
+    background: #087f6b;
+    color: white;
+}
+
+.error .message-icon {
+    background: #b63838;
+    color: white;
+}
+
+.form-message strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.form-message span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #0d2723;
+    color: white;
+}
+
+.footer-main {
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+}
+
+.footer-logo {
+    margin-bottom: 13px;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.footer-main p {
+    max-width: 360px;
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.footer-main strong {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.footer-main a {
+    display: block;
+    margin: 9px 0;
+    color: rgba(255,255,255,0.72);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-main a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .navigation {
+        display: none;
+    }
+
+    .trust {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .trust div {
+        padding: 0;
+        border: 0;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+}
+
+
+/* =========================================
+   SMARTPHONE
+========================================= */
+
+@media (max-width: 650px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .header {
+        min-height: 72px;
+        padding: 0 5%;
+    }
+
+    .logo-icon {
+        width: 39px;
+        height: 39px;
+    }
+
+    .logo strong {
+        font-size: 17px;
+    }
+
+    .logo small {
+        display: none;
+    }
+
+    .header-button {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 700px;
+        padding: 70px 6%;
+        background-position: 65% center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+        letter-spacing: -1.7px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+    .hero .button {
+        width: 100%;
+    }
+
+    .hero-benefits {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .trust {
+        grid-template-columns: 1fr 1fr;
+        padding: 30px 6%;
+        gap: 24px 15px;
+    }
+
+    .trust strong {
+        font-size: 15px;
+    }
+
+    .trust span {
+        font-size: 13px;
+    }
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-image {
+        height: 230px;
+    }
+
+    .about-image {
+        min-height: 430px;
+    }
+
+    .form-container {
+        padding: 30px 21px;
+    }
+
+    .form-container h3 {
+        font-size: 27px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-message.success,
+    .form-message.error {
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        padding: 55px 6%;
+        gap: 38px;
+    }
+
+    .footer-bottom {
+        padding: 22px 6%;
+        flex-direction: column;
+        gap: 6px;
+    }
+}
