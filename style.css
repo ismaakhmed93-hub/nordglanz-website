@@ -2,6 +2,10 @@
    NORDGLANZ
    DESKTOP + MOBILE
 ========================================================= */
+/* =========================================================
+   NORDGLANZ
+   DESKTOP + MOBILE
+========================================================= */
 
 * {
     margin: 0;
@@ -1615,19 +1619,39 @@ img {
 @media (max-width: 700px) {
 
     html {
-        scroll-padding-top: 66px;
+        /*
+           На телефоне шапка больше не закреплена,
+           поэтому дополнительный отступ сверху
+           при переходе по якорям не нужен.
+        */
+        scroll-padding-top: 0;
     }
 
 
-    /* HEADER */
+    /* =====================================================
+       MOBILE HEADER
+       ВАЖНО:
+       position: static убирает sticky на телефоне.
+       Шапка теперь уезжает вверх вместе со страницей.
+    ===================================================== */
 
     .header {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+
         height: 66px;
 
         padding: 0 17px;
 
         background: rgba(255, 255, 255, 0.98);
+
+        transform: none !important;
     }
+
+
+    /* HAMBURGER */
 
     .menu-button {
         width: 40px;
@@ -1649,6 +1673,9 @@ img {
     .menu-button > span:nth-child(2) {
         width: 21px;
     }
+
+
+    /* LOGO */
 
     .logo-symbol {
         width: 33px;
@@ -1962,10 +1989,4 @@ img {
         text-align: left;
     }
 
-}/* На телефоне шапка НЕ следует за прокруткой */
-@media (max-width: 700px) {
-    .header {
-        position: relative;
-        top: auto;
-    }
 }
