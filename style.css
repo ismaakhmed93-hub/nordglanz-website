@@ -1962,4 +1962,10 @@ img {
         text-align: left;
     }
 
+}/* На телефоне шапка НЕ следует за прокруткой */
+@media (max-width: 700px) {
+    .header {
+        position: relative;
+        top: auto;
+    }
 }
